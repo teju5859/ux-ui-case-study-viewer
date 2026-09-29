@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UX/UI Case Study Viewer - Interactive showcase landing page featuring digital product design case studies and live Figma prototype embeds.">
+    <title>UX/UI Case Study Viewer | Digital Product Design Showcase</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                <span class="logo-text">PixelCraft<span class="accent">UX</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#case-studies" class="nav-link active">Case Studies</a>
+                <a href="#process" class="nav-link">Design Process</a>
+                <a href="#metrics" class="nav-link">Impact Metrics</a>
+                <a href="#about" class="nav-link">About Project</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="status-badge"><span class="pulse-dot"></span> K8s Deployed</span>
+                <button class="btn btn-primary" id="open-prototype-quick"><i class="fa-solid fa-play"></i> Quick Prototype</button>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-rocket"></i> Automated DevOps Continuous Deployment Active
+            </div>
+            <h1 class="hero-title">Designing Digital Products That <span class="gradient-text">Users Love</span></h1>
+            <p class="hero-subtitle">Interactive UX/UI Case Study Viewer featuring end-to-end design research, wireframes, high-fidelity prototypes, and user metrics.</p>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="3">3</h3>
+                    <p class="stat-label">Full Case Studies</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="98">98%</h3>
+                    <p class="stat-label">User Satisfaction</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="45">+45%</h3>
+                    <p class="stat-label">Conversion Lift</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="100">100%</h3>
+                    <p class="stat-label">Docker & K8s Automated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section case-studies-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Featured <span class="gradient-text">Case Studies</span></h2>
+                <p class="section-subtitle">Filter by category to explore UX research, interface design, and prototype demonstrations.</p>
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="web">Web Products</button>
+                    <button class="filter-btn" data-filter="dashboard">SaaS Dashboards</button>
+                </div>
+            </div>
+
+            <div class="case-study-grid">
+                <!-- Case Study 1 -->
+                <article class="case-study-card" data-category="mobile">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">FinTech Mobile</div>
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="NeoPay FinTech App Showcase" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn btn-light open-modal-btn" data-study="neopay">
+                                <i class="fa-solid fa-eye"></i> View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">UX Research</span>
+                            <span class="tag">iOS & Android</span>
+                            <span class="tag">Figma</span>
+                        </div>
+                        <h3 class="card-title">NeoPay – Next-Gen Mobile Banking & Wealth Management</h3>
+                        <p class="card-description">Redesigning mobile payments to eliminate user friction, simplify peer transfers, and increase investment adoption by 45%.</p>
+                        <div class="card-footer">
+                            <div class="metric-highlight"><i class="fa-solid fa-chart-line"></i> +45% Transfer Speed</div>
+                            <button class="btn-link open-modal-btn" data-study="neopay">Read Study <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case Study 2 -->
+                <article class="case-study-card" data-category="dashboard">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">Healthcare SaaS</div>
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="PulseHealth Dashboard Showcase" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn btn-light open-modal-btn" data-study="pulsehealth">
+                                <i class="fa-solid fa-eye"></i> View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">Analytics</span>
+                            <span class="tag">AI Insights</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                        <h3 class="card-title">PulseHealth – AI Clinical Dashboard & Patient Tracking</h3>
+                        <p class="card-description">A streamlined dashboard allowing healthcare practitioners to monitor patient telemetry in real-time with zero cognitive overload.</p>
+                        <div class="card-footer">
+                            <div class="metric-highlight"><i class="fa-solid fa-clock"></i> -60% Diagnostic Time</div>
+                            <button class="btn-link open-modal-btn" data-study="pulsehealth">Read Study <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case Study 3 -->
+                <article class="case-study-card" data-category="web">
+                    <div class="card-image-wrapper">
+                        <div class="card-badge">E-Commerce</div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="AuraShop E-Commerce Showcase" class="card-img">
+                        <div class="card-overlay">
+                            <button class="btn btn-light open-modal-btn" data-study="aurashop">
+                                <i class="fa-solid fa-eye"></i> View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">A/B Testing</span>
+                            <span class="tag">Micro-Interactions</span>
+                        </div>
+                        <h3 class="card-title">AuraShop – High-Conversion Luxury Fashion Platform</h3>
+                        <p class="card-description">Crafting a minimal aesthetic store with instant one-click checkout, interactive 3D product previews, and personal style quizzes.</p>
+                        <div class="card-footer">
+                            <div class="metric-highlight"><i class="fa-solid fa-shopping-bag"></i> +32% Cart Conversion</div>
+                            <button class="btn-link open-modal-btn" data-study="aurashop">Read Study <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process Section -->
+    <section id="process" class="section process-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Human-Centered <span class="gradient-text">Design Process</span></h2>
+                <p class="section-subtitle">Iterative UX methodology combined with continuous DevOps deployment for seamless product releases.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Empathize & Research</h3>
+                    <p class="step-desc">User interviews, competitive analysis, heuristic evaluation, and target persona mapping.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Ideate & Wireframe</h3>
+                    <p class="step-desc">Information architecture, low-fidelity wireframing, and user task flow optimization.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Prototype & UI</h3>
+                    <p class="step-desc">High-fidelity UI components, design tokens, micro-interactions, and Figma interactive prototypes.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">DevOps Deploy</h3>
+                    <p class="step-desc">Automated build via Jenkins, containerization with Docker, Terraform infra, Ansible config & K8s orchestration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps Pipeline Banner -->
+    <section class="section devops-banner">
+        <div class="container">
+            <div class="pipeline-card">
+                <div class="pipeline-header text-center">
+                    <h3><i class="fa-solid fa-diagram-project"></i> Complete Live DevOps Pipeline Architecture</h3>
+                    <p>Automated zero-downtime integration & continuous delivery flow powering this showcase.</p>
+                </div>
+                <div class="pipeline-nodes">
+                    <div class="node"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+                    <div class="node-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="node"><i class="fa-brands fa-jenkins"></i><span>Jenkins CI</span></div>
+                    <div class="node-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="node"><i class="fa-brands fa-docker"></i><span>Docker Hub</span></div>
+                    <div class="node-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="node"><i class="fa-solid fa-cloud"></i><span>Terraform</span></div>
+                    <div class="node-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="node"><i class="fa-solid fa-terminal"></i><span>Ansible</span></div>
+                    <div class="node-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="node"><i class="fa-solid fa-network-wired"></i><span>Kubernetes</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Detailed Case Study & Prototype -->
+    <div class="modal" id="case-study-modal" aria-hidden="true">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-content-wrapper" id="modal-dynamic-content">
+                <!-- Content injected dynamically via app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="brand-logo">
+                    <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                    <span class="logo-text">PixelCraft<span class="accent">UX</span></span>
+                </a>
+                <p>3rd Year B.E. CSE Cloud Computing & DevOps Mini Project.</p>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 UX/UI Case Study Viewer | Built with Docker, Kubernetes, Jenkins & AWS Terraform.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

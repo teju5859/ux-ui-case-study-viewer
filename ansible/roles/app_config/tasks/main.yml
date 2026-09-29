@@ -1,0 +1,25 @@
+---
+# Task: Configure Application Workspace & Security Settings
+- name: Create deployment target directory
+  file:
+    path: /opt/uxui-app
+    state: directory
+    owner: ubuntu
+    group: docker
+    mode: '0775'
+
+- name: Configure UFW Firewall rules
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+    proto: tcp
+  loop:
+    - '22'
+    - '80'
+    - '443'
+    - '8080'
+    - '30080'
+
+- name: Print server readiness status
+  debug:
+    msg: "Server configuration completed successfully! Docker and Kubernetes tools are installed."

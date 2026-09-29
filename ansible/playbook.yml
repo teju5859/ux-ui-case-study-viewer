@@ -1,0 +1,14 @@
+---
+# Master Ansible Playbook for Server Configuration & DevOps Prerequisites Setup
+- name: Configure DevOps Provisioned Server for Docker & Kubernetes
+  hosts: webservers
+  become: yes
+  vars:
+    docker_users:
+      - ubuntu
+    k8s_version: "v1.28.2"
+
+  roles:
+    - docker
+    - k8s_prep
+    - app_config

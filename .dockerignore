@@ -1,0 +1,14 @@
+.git
+.github
+.gitignore
+.terraform
+*.tfstate
+*.tfstate.backup
+terraform/
+ansible/
+k8s/
+docs/
+README.md
+Jenkinsfile
+*.zip
+*.log
